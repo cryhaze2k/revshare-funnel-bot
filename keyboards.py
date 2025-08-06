@@ -4,9 +4,10 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 from config import BASE_URL
 
 def get_verify_keyboard():
-    """Клавиатура для запроса верификации через Web App. [cite: 463]"""
+    """Клавиатура для запроса верификации через Web App."""
     builder = InlineKeyboardBuilder()
-    web_app = WebAppInfo(url=f"{BASE_URL}/web_app") # URL нашего веб-приложения
+    # А вот так - правильно:
+    web_app = WebAppInfo(url=f"{BASE_URL}/web_app/index.html") 
     builder.add(InlineKeyboardButton(text="✅ Verify Location", web_app=web_app))
     return builder.as_markup()
 
