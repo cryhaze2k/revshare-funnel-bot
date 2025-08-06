@@ -2,4 +2,6 @@
 aiogram==3.7.0
 python-dotenv==1.0.1
 requests==2.32.3
-aiohttp==3.9.5 # для вебхука и веб-приложения
+aiohttp==3.9.5
+gunicorn==22.0.0
+uvicorn==0.30.1
